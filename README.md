@@ -16,7 +16,7 @@ This Terraform configuration creates the following resources in Azure:
 ## Usage:
 
 1. Create a new directory for your Terraform project and place the main.tf and providers.tf files inside it.
-2. Initialize Terraform: Run terraform init to initialize the working directory and download necessary providers.
-3. Plan the changes: Run terraform plan to preview the infrastructure changes that will be made.
-4. Apply the changes: Run terraform apply to create the resources in Azure.
+2. Initialize Terraform: Run `terraform init` to initialize the working directory and download necessary providers.
+3. Plan the changes: Run `terraform plan` to preview the infrastructure changes that will be made.
+4. Apply the changes: Run `terraform apply` to create the resources in Azure.
 5. Deploy your WebJob: Deploy your compiled WebJob to the created Web App.
