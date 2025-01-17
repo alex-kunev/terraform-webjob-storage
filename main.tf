@@ -27,8 +27,16 @@ resource "azurerm_app_service" "example" {
   resource_group_name = azurerm_resource_group.example.name
   app_service_plan_id = azurerm_app_service_plan.example.id
 
-  app_settings = {
-    "AzureStorageStr" = azurerm_storage_account.example.primary_connection_string
+  # Application Insights settings
+  application_insights_setting {
+    instrumentation_key = "YOUR_APPLICATION_INSIGHTS_KEY"
+  }
+
+  # Defining the connection string as an environment variable
+  site_config {
+    app_settings = {
+      AzureStorageStr = data.azurerm_storage_account_connection_string.example.primary
+    }
   }
 }
 
